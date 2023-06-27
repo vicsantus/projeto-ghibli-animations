@@ -31,7 +31,7 @@ export default function Home() {
                   name={ film.id }
                   type="button"
                 >
-                  {film.fav ? 'Desfavoritar' : 'Favoritar'}
+                  {film.fav ? 'Disfavor' : 'Favorite'}
                 </button>
               </div>
             </section>

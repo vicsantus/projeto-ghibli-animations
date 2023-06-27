@@ -30,7 +30,7 @@ export default function Favorites() {
                   name={ film.id }
                   type="button"
                 >
-                  {film.fav ? 'Desfavoritar' : 'Favoritar'}
+                  {film.fav ? 'Disfavor' : 'Favorite'}
                 </button>
               </div>
             </section>
