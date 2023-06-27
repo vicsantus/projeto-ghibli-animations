@@ -17,10 +17,10 @@
 
 ## Como executar: 
 
-- git clone git@github.com:vicsantus/projeto-ghibli-animations.git
-- cd projeto-ghibli-animations
-- docker compose up -d
-- cd view && npm i (Caso o docker não monte o container do frontend)
+- `git clone git@github.com:vicsantus/projeto-ghibli-animations.git`
+- `cd projeto-ghibli-animations`
+- `docker compose up -d`
+- `cd view && npm i (Caso o docker não monte o container do frontend)`
 
 ## Funcionalidades: 
 
