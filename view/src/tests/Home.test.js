@@ -1,8 +1,8 @@
 import { screen, waitFor } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
-import renderWithRouter from './helper/renderWith';
-// import userEvent from '@testing-library/user-event';
 import App from '../App';
+import renderWithRouter from './helper/renderWith';
 import mockCards from './mocks/cards.mock';
 
 describe("Testes para a pagina Home", () => {
@@ -27,18 +27,20 @@ describe("Testes para a pagina Home", () => {
     expect(botao).toBeDefined();
   })
 
-  // test('Testa se existe o botão de favoritar na tela', async () => {
-  //   jest.spyOn(window, 'fetch');
-  //   global.fetch.mockResolvedValue({
-  //     json: jest.fn().mockResolvedValue(mockCards),
-  //   });
+  test('Testa se ao clicar no botão, muda seu texto interno', async () => {
+    jest.spyOn(window, 'fetch');
+    global.fetch.mockResolvedValue({
+      json: jest.fn().mockResolvedValue(mockCards),
+    });
     
-  //   renderWithRouter(<App />, { initialEntries: ['/'] });
+    renderWithRouter(<App />, { initialEntries: ['/'] });
 
-  //   await waitFor(async () => {
-  //     botao = await screen.getByTestId('button 1');
-  //   }, { timeout: 1000 });
+    await waitFor(async () => {
+      botao = await screen.getByTestId('button 1');
+      userEvent.click(botao);
+      botaoClicado = await screen.getByText('Disfavor')
+    }, { timeout: 1000 });
   
-  //   expect(botao).toBeDefined();
-  // })
+    expect(botaoClicado).toBeDefined();
+  })
 })
