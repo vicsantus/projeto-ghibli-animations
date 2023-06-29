@@ -30,6 +30,7 @@ export default function Home() {
                   onClick={ handleClick }
                   name={ film.id }
                   type="button"
+                  data-testid={ `button ${film.id}` }
                 >
                   {film.fav ? 'Disfavor' : 'Favorite'}
                 </button>
