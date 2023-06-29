@@ -11,7 +11,6 @@ export default function Home() {
       }
       return film;
     });
-    console.log(name);
     setApiResp(newFilms);
   };
   return (
@@ -27,10 +26,10 @@ export default function Home() {
                 <h3>{film.title}</h3>
                 <p>{film.description}</p>
                 <button
+                  data-testid={ `button ${film.id}` }
                   onClick={ handleClick }
                   name={ film.id }
                   type="button"
-                  data-testid={ `button ${film.id}` }
                 >
                   {film.fav ? 'Disfavor' : 'Favorite'}
                 </button>

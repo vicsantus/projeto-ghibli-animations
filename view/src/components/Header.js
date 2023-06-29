@@ -9,7 +9,7 @@ export default function Header() {
         <Link to="/">
           <Ghibli />
         </Link>
-        <Link to="/favorites">
+        <Link data-testid="fav-testid" to="/favorites">
           <Vector />
           Favorites
         </Link>
