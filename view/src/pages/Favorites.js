@@ -26,6 +26,7 @@ export default function Favorites() {
                 <h3>{film.title}</h3>
                 <p>{film.description}</p>
                 <button
+                  data-testid={ `button ${film.id}` }
                   onClick={ handleClick }
                   name={ film.id }
                   type="button"
