@@ -13,6 +13,8 @@
   <li>Docker</li>
   <li>JavaScript</li>
   <li>React</li>
+  <li>React Testing Library</li>
+  <li>Mocha, Chai, Chai-http, Sinon</li>
 </ul>
 
 ## Como executar: 
