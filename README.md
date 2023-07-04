@@ -21,6 +21,7 @@
 - `cd projeto-ghibli-animations`
 - `docker compose up -d`
 - `cd view && npm i (Caso o docker não monte o container do frontend)`
+- `npm run test` para testes no backend `cd view && npm run test` para testes no frontend
 
 ## Funcionalidades: 
 
