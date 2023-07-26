@@ -4,7 +4,7 @@ services:
     build: ./view
     container_name: ghibli-front-end
     ports:
-      - 3000:3000
+      - 3006:3000
     working_dir: /app-frontend
     volumes:
       - ./view:/app-frontend
